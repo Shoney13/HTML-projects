@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lemonada"
+    />
+    <link rel="stylesheet" href="project1.css" />
+    <title>Project 1</title>
+  </head>
+
+  <header><h1>Survey</h1></header>
+  <body>
+    <div>
+      <h1>This is a test Survey</h1>
+      <p>Created by me to collect data</p>
+      <hr />
+      <article>
+        More information on this could be found
+        <a href="https://www.questionpro.com/blog/surveys/" target="_blank"
+          >here
+        </a>
+      </article>
+    </div>
+    <hr />
+    <div>
+      <section>Please fill the survey with utmost sincerity</section>
+      <hr />
+    </div>
+    <br /><br />
+    <form
+      action="https://wallpapercave.com/wp/wp3315719.jpg"
+      method="get"
+      target="_blank"
+    >
+      <article>
+        <h2>The Survey</h2>
+        <label for="name"> Enter Your Name: &ThickSpace;</label>
+        <input type="text" name="name" id="name" placeholder="Jotaro Joestar" />
+        <br />
+        <label for="email">Enter Your Email ID:&ThickSpace; </label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="JoJo@gmail.com"
+        />
+        <br />
+        <label for="age"> Enter Your Age: &ThickSpace;</label>
+        <input type="number" name="age" id="age" placeholder="16" />
+        <br />
+        <label for="rating">Rate this Survey</label>
+        <input
+          type="number"
+          name="rating"
+          id="rating"
+          min="1"
+          max="10"
+          onkeydown="reSet()"
+          onkeypress="reSet()"
+          onkeyup="reSet()"
+        />
+        <br />
+        Select Your Favorite Languages <br />
+        <input type="checkbox" name="favLang" id="java" />
+        <label for="java">JAVA</label><br />
+        <input type="checkbox" name="favLang" id="html" />
+        <label for="java">HTML</label><br />
+        <input type="checkbox" name="favLang" id="css" />
+        <label for="java">CSS</label><br />
+        <input type="checkbox" name="favLang" id="javascript" />
+        <label for="java">JAVASCRIPT</label><br />
+        <input type="checkbox" name="favLang" id="other" />
+        <label for="java">Other</label><br /><br />
+        <button type="submit">Click Here to Submit</button>
+      </article>
+    </form>
+    <br />
+    <div class="image">
+      <img
+        id="JoJo"
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/41604d02-c1a2-4a07-9578-1ba6c670fc1b/d8zb94a-44e6eb5f-c0f1-4ff8-a934-8360d24ee0ae.png/v1/fill/w_1024,h_576,q_80,strp/jotaro_kujo_vs_dio_wallpaper__1920_x_1080__by_icekong1001_d8zb94a-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvNDE2MDRkMDItYzFhMi00YTA3LTk1NzgtMWJhNmM2NzBmYzFiXC9kOHpiOTRhLTQ0ZTZlYjVmLWMwZjEtNGZmOC1hOTM0LTgzNjBkMjRlZTBhZS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.CINdpSmjza2G6OjOx0qPzOxUgyM2CK0fRGL-haBZe8E"
+        alt="Dio vs Jotaro"
+      />
+    </div>
+    <footer><h1>Thank you for Completing!</h1></footer>
+  </body>
+  <script>
+    
+    var inputF = document.getElementById("rating");
+
+    function reSet() {
+      // alert(inputF.value);
+      if (inputF.value > 10 || inputF.value < 1) {
+        inputF.value = "";
+        //  alert(inpChar);
+      }
+    }
+  </script>
+</html>

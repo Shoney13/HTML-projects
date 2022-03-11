@@ -1,0 +1,61 @@
+header > h1 ,footer > h1 {
+  font-size: 250%;
+  font-family: Lemonada;
+  color: #38ceba;
+  text-align: center;
+  text-decoration-line: underline;
+  margin-bottom: 0%;
+}
+
+div h1 {
+  font-size: 150%;
+  font-family: Lemonada;
+  text-align: left;
+}
+
+body {
+  background-color: #121212;
+  color: rgb(209, 192, 192);
+  overflow-x: hidden
+}
+
+hr {
+  margin: 10px -10px 10px -10px;
+  border: solid 1px;
+}
+
+#rating:out-of-range {
+  color: red;
+}
+
+form {
+  /* background-image: linear-gradient(to right, #8360c3, #2ebf91); */
+  border: yellow dotted 5px;
+}
+
+form *, form {
+  color: whitesmoke;
+  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+  margin: 5px;
+}
+
+input::placeholder {
+  color: whitesmoke;
+  opacity: 0.7;
+}
+
+#JoJo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 5%;
+}
+
+.image{
+  display: block;
+  width: 99%;
+}
+
+a:hover{
+  color: purple;
+}
