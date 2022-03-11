@@ -23,7 +23,7 @@
     <form class="searchBar" target="_blank">
       <input
         type="search"
-        name="search"
+        name="gsearch"
         id="gsearch"
         placeholder="Search Google or type a URL"
       /><br />
@@ -52,7 +52,13 @@
 
   <script>
     var srh = document.getElementById("gsearch");
-    
+
+    document.querySelector("#gsearch").addEventListener("keyup", (event) => {
+      // alert(event.key);
+      if (event.key !== "Enter") return;
+      event.preventDefault();
+      document.querySelector("#sb1").click();
+    });
     function search() {
       var keyword = srh.value;
       // alert(keyword);
