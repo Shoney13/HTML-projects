@@ -26,7 +26,6 @@
         name="search"
         id="gsearch"
         placeholder="Search Google or type a URL"
-        onsubmit="search()"
       /><br />
     </form>
     <div class="searchButtons">
@@ -52,8 +51,9 @@
   </body>
 
   <script>
+    var srh = document.getElementById("gsearch");
+    
     function search() {
-      var srh = document.getElementById("gsearch");
       var keyword = srh.value;
       // alert(keyword);
       window.location = "https://www.google.com/search?q=" + keyword;
