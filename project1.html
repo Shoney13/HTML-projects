@@ -47,7 +47,17 @@
         />
         <br />
         <label for="age"> Enter Your Age: &ThickSpace;</label>
-        <input type="number" name="age" id="age" placeholder="16" min="12" max="99"/>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          placeholder="16"
+          min="1"
+          max="99"
+          onkeydown="reSet(id,min,max)"
+          onkeypress="reSet(id,min,max)"
+          onkeyup="reSet(id,min,max)"
+        />
         <br />
         <label for="rating">Rate this Survey</label>
         <input
@@ -56,9 +66,9 @@
           id="rating"
           min="1"
           max="10"
-          onkeydown="reSet()"
-          onkeypress="reSet()"
-          onkeyup="reSet()"
+          onkeydown="reSet(id,min,max)"
+          onkeypress="reSet(id,min,max)"
+          onkeyup="reSet(id,min,max)"
         />
         <br />
         Select Your Favorite Languages <br />
@@ -86,11 +96,15 @@
     <footer><h1>Thank you for Completing!</h1></footer>
   </body>
   <script>
-    var inputF = document.getElementById("rating");
-
-    function reSet() {
-      // alert(inputF.value);
-      if (inputF.value > 10 || inputF.value < 1) {
+    function reSet(id, min, max) {
+      var inputF = document.getElementById(id);
+      var Min = parseInt(min);
+      var Max = parseInt(max);
+    
+      // alert(inputF.value>max);
+      // alert(typeof(max));
+      // alert(typeof(Min));
+      if (inputF.value > Max || inputF.value < Min) {
         inputF.value = "";
         //  alert(inpChar);
       }
