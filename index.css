@@ -5,12 +5,20 @@ html {
   width: 100%;
 }
 
+h1 {
+  text-align: center;
+  font-family: "Bungee", cursive;
+  /* background: linear-gradient(60deg, #e21143, #ffb03a); */
+  /* color: lightblue; */
+  color: aliceblue;
+  text-shadow: 1px 1px black;
+}
+
 .container {
   display: flex;
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
-  border: 3px dotted blue;
   justify-content: space-evenly;
 }
 
@@ -20,7 +28,7 @@ html {
   width: 30%;
   min-width: 350px;
   height: auto;
-
+  border-radius: 15px;
   justify-content: center;
   text-align: center;
   margin: 1%;
@@ -34,24 +42,28 @@ html {
   margin: 0%;
   margin-bottom: 1%;
   padding: 0%;
+  border-radius: 15px;
 }
 
 img {
   max-width: 99%;
   object-fit: contain;
+  border-radius: 15px;
 }
 
 .projectname {
   font-size: larger;
   font-family: "Bungee", cursive;
-  
+  color: red;
 }
 .project:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
 }
-
