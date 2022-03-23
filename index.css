@@ -83,3 +83,26 @@ a:hover,
 a:active {
   text-decoration: none;
 }
+/* Amazon clone WIP */
+#p4 {
+  position: relative;
+}
+.wip {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  font-size: larger;
+  font-family: "Bungee", cursive;
+  font-weight: bold;
+  display: none;
+}
+#p4:hover .wip {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px black;
+  background-color: rgba(0, 0, 0, 0.479);
+  width: 100%;
+  
+}
+
