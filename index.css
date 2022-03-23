@@ -10,13 +10,13 @@ html {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .project{
+  .project {
     width: 90%;
   }
 }
 /* Large devices (laptops/desktops, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .project{
+  .project {
     width: 30%;
     min-width: 350px;
   }
