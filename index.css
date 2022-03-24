@@ -83,6 +83,7 @@ a:hover,
 a:active {
   text-decoration: none;
 }
+/* Footer Icons */
 
 footer {
   /* position: absolute; */
@@ -96,12 +97,6 @@ footer {
   /* transform: translateX(-50%); */
 }
 
-
-
-/* body {
-  border: double blue;
-  min-height: 100%;
-} */
 
 .fa-linkedin,
 .fa-github {
