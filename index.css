@@ -121,8 +121,8 @@ footer {
   color: #0077B5;
 }
 
-/* Amazon clone WIP */
-#p4 {
+/* use WIP with Project class and wip with span */
+.WIP {
   position: relative;
 }
 .wip {
@@ -135,7 +135,7 @@ footer {
   font-weight: bold;
   display: none;
 }
-#p4:hover .wip {
+.WIP:hover .wip {
   display: block;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px black;
