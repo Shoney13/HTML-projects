@@ -63,7 +63,7 @@ ul {
 .sidebar {
   border-right: 1px solid grey;
   padding: 10px;
-  flex-shrink: 0;
+  flex-shrink: 0.25;
 }
 
 .main-products {
@@ -79,8 +79,6 @@ ul {
   }
   .product {
     width: 35%;
-  }
-  .main-products {
   }
 }
 /* Large devices (laptops/desktops, 600px and up) */
@@ -114,13 +112,13 @@ ul {
   font-size: smaller;
 }
 
-.fa-star,
-.fa-star-half-stroke {
+.ca-star,
+.ca-star-half-stroke {
   color: #ffa41c;
   font-size: small;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: #e68c37;
 }
-.fa-indian-rupee-sign {
+.ca-indian-rupee-sign {
   font-size: smaller;
 }
