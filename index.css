@@ -83,6 +83,44 @@ a:hover,
 a:active {
   text-decoration: none;
 }
+
+footer {
+  /* position: absolute; */
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  text-align: center;
+  /* padding-bottom: 5%; */
+  /* float: bottom; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+}
+
+
+
+/* body {
+  border: double blue;
+  min-height: 100%;
+} */
+
+.fa-linkedin,
+.fa-github {
+  font-size: xx-large;
+  margin: 1%;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover {
+  transform: scale(1.1);
+}
+.fa-github{
+  color: #171515;
+}
+
+.fa-linkedin{
+  color: #0077B5;
+}
+
 /* Amazon clone WIP */
 #p4 {
   position: relative;

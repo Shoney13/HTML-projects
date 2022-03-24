@@ -20,8 +20,21 @@ ul {
   list-style: none;
 }
 
+.aSearch{
+  position: relative;
+  flex-grow: 0.5;
+}
+.aSearch i{
+  position: absolute;
+  color: black;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  
+}
 #asearch {
-  width: 50em;
+  width: 100%;
+  /* max-width: 500px; */
   height: 3em;
   border-radius: 5px;
 }
@@ -47,4 +60,17 @@ ul {
 
 .sidebar {
   border-right: 1px solid grey;
+  padding: 10px;
+}
+
+.product{
+  box-sizing: border-box;
+  margin: 10px;
+  max-width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 10px;
+}
+
+.pro-img img{
+  width: 100%;
 }
