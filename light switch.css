@@ -1,0 +1,25 @@
+html,
+    body {
+      height: 100%;
+      background: black;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      flex-direction: column;
+    }
+    .bulbImg,
+    .bulbButton {
+      z-index: 1;
+      margin: 10px;
+    }
+    #block {
+      position: absolute;
+      width: 00%;
+      height: 00%;
+      /* border: yellow double; */
+      /* background: radial-gradient(circle,rgb(255, 255, 0) 5%,white 15%); */
+      z-index: 0;
+    }
