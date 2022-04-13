@@ -1,4 +1,5 @@
 let currExpand = "p";
+
 function panelClick(id) {
   // document.getElementById(currExpand).style.flex=1;
   // document.getElementById(id).style.flex=6;
@@ -10,6 +11,7 @@ function panelClick(id) {
   console.log(3);
 }
 
+// Switching Between the current Open to the next one we want to open
 function panelSwitch(id) {
   let currOpen = document.getElementById(currExpand);
   let currClose = document.getElementById(id);
@@ -19,7 +21,7 @@ function panelSwitch(id) {
   textOpacity.style.opacity = 0;
   var plus = 1;
   var minus = 6;
-
+  // Closing Current and Opening New one
   let flexTimer = setInterval(function () {
     if (plus >= 6 || minus <= 1) {
       currOpen.style.flex = 1;
@@ -32,7 +34,7 @@ function panelSwitch(id) {
       currClose.style.flex = plus;
     }
   }, 1);
-
+  // Making the text appear;
   let currOpacity = 0;
   let opacityTimer = setInterval(function () {
     if (currOpacity >= 1) {
@@ -47,15 +49,15 @@ function panelSwitch(id) {
   currExpand = id;
 }
 
+// Opening A new one When all are closed
 function panelExpand(id) {
-  // let currOpen = document.getElementById(currExpand);
   let currClose = document.getElementById(id);
   // document.querySelector("#" + currExpand + " h3").style.opacity = 0;
   // document.querySelector('#'+id+" h3").style.opacity=1;
   let textOpacity = document.querySelector("#" + id + " h3");
   textOpacity.style.opacity = 0;
   var plus = 1;
-
+  // Opening Panel
   let flexTimer = setInterval(function () {
     if (plus >= 6) {
       currClose.style.flex = 6;
@@ -65,7 +67,7 @@ function panelExpand(id) {
       currClose.style.flex = plus;
     }
   }, 1);
-
+  // Making text appear
   let currOpacity = 0;
   let opacityTimer = setInterval(function () {
     if (currOpacity >= 1) {
@@ -79,7 +81,9 @@ function panelExpand(id) {
 
   currExpand = id;
 }
-function panelEqualize(id){
+
+// Closing the currently opened one when clicked on
+function panelEqualize(id) {
   let currOpen = document.getElementById(currExpand);
   document.querySelector("#" + currExpand + " h3").style.opacity = 0;
   // document.querySelector('#'+id+" h3").style.opacity=1;
@@ -108,5 +112,5 @@ function panelEqualize(id){
     }
   }, 40);
 
-  currExpand = 'p';
+  currExpand = "p";
 }
