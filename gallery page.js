@@ -1,18 +1,21 @@
 let currExpand = "p";
-
+let takeInput = true;
 function panelClick(id) {
   // document.getElementById(currExpand).style.flex=1;
   // document.getElementById(id).style.flex=6;
-  if (currExpand == id) return panelEqualize(id);
-  console.log(1);
-  if (currExpand == "p") return panelExpand(id);
-  console.log(2);
-  panelSwitch(id);
-  console.log(3);
+  if (takeInput) {
+    if (currExpand == id) return panelEqualize(id);
+    console.log(1);
+    if (currExpand == "p") return panelExpand(id);
+    console.log(2);
+    panelSwitch(id);
+    console.log(3);
+  }
 }
 
 // Switching Between the current Open to the next one we want to open
 function panelSwitch(id) {
+  takeInput = false;
   let currOpen = document.getElementById(currExpand);
   let currClose = document.getElementById(id);
   document.querySelector("#" + currExpand + " h3").style.opacity = 0;
@@ -39,6 +42,7 @@ function panelSwitch(id) {
   let opacityTimer = setInterval(function () {
     if (currOpacity >= 1) {
       textOpacity.style.opacity = 1;
+      takeInput=true;
       clearInterval(opacityTimer);
     } else {
       currOpacity += 0.1;
@@ -51,6 +55,7 @@ function panelSwitch(id) {
 
 // Opening A new one When all are closed
 function panelExpand(id) {
+  takeInput = false;
   let currClose = document.getElementById(id);
   // document.querySelector("#" + currExpand + " h3").style.opacity = 0;
   // document.querySelector('#'+id+" h3").style.opacity=1;
@@ -72,6 +77,7 @@ function panelExpand(id) {
   let opacityTimer = setInterval(function () {
     if (currOpacity >= 1) {
       textOpacity.style.opacity = 1;
+      takeInput=true;
       clearInterval(opacityTimer);
     } else {
       currOpacity += 0.1;
@@ -84,6 +90,7 @@ function panelExpand(id) {
 
 // Closing the currently opened one when clicked on
 function panelEqualize(id) {
+  takeInput = false;
   let currOpen = document.getElementById(currExpand);
   document.querySelector("#" + currExpand + " h3").style.opacity = 0;
   // document.querySelector('#'+id+" h3").style.opacity=1;
@@ -105,6 +112,7 @@ function panelEqualize(id) {
   let opacityTimer = setInterval(function () {
     if (currOpacity <= 0) {
       textOpacity.style.opacity = 0;
+      takeInput=true;
       clearInterval(opacityTimer);
     } else {
       currOpacity -= 0.1;
