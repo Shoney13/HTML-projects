@@ -1,14 +1,22 @@
-let currExpand = "p1";
-function panelExpand(id) {
+let currExpand = "p";
+function panelClick(id) {
   // document.getElementById(currExpand).style.flex=1;
   // document.getElementById(id).style.flex=6;
-  if (currExpand == id) return;
+  if (currExpand == id) return panelEqualize(id);
+  console.log(1);
+  if (currExpand == "p") return panelExpand(id);
+  console.log(2);
+  panelSwitch(id);
+  console.log(3);
+}
+
+function panelSwitch(id) {
   let currOpen = document.getElementById(currExpand);
   let currClose = document.getElementById(id);
-  document.querySelector('#'+currExpand+" h3").style.opacity=0;
+  document.querySelector("#" + currExpand + " h3").style.opacity = 0;
   // document.querySelector('#'+id+" h3").style.opacity=1;
-  let textOpacity=document.querySelector('#'+id+" h3");
-  textOpacity.style.opacity=0;
+  let textOpacity = document.querySelector("#" + id + " h3");
+  textOpacity.style.opacity = 0;
   var plus = 1;
   var minus = 6;
 
@@ -22,21 +30,83 @@ function panelExpand(id) {
       minus -= 0.05;
       currOpen.style.flex = minus;
       currClose.style.flex = plus;
-      console.log(currOpen.style.flex + " " + currClose.style.flex);
-      console.log(plus+" "+minus);
     }
   }, 1);
 
-  let currOpacity=0;
+  let currOpacity = 0;
   let opacityTimer = setInterval(function () {
-    if (currOpacity>=1) {
-      textOpacity.style.opacity=1;
+    if (currOpacity >= 1) {
+      textOpacity.style.opacity = 1;
       clearInterval(opacityTimer);
     } else {
-      currOpacity+=0.1;
-      textOpacity.style.opacity=currOpacity;
+      currOpacity += 0.1;
+      textOpacity.style.opacity = currOpacity;
     }
   }, 50);
 
   currExpand = id;
+}
+
+function panelExpand(id) {
+  // let currOpen = document.getElementById(currExpand);
+  let currClose = document.getElementById(id);
+  // document.querySelector("#" + currExpand + " h3").style.opacity = 0;
+  // document.querySelector('#'+id+" h3").style.opacity=1;
+  let textOpacity = document.querySelector("#" + id + " h3");
+  textOpacity.style.opacity = 0;
+  var plus = 1;
+
+  let flexTimer = setInterval(function () {
+    if (plus >= 6) {
+      currClose.style.flex = 6;
+      clearInterval(flexTimer);
+    } else {
+      plus += 0.05;
+      currClose.style.flex = plus;
+    }
+  }, 1);
+
+  let currOpacity = 0;
+  let opacityTimer = setInterval(function () {
+    if (currOpacity >= 1) {
+      textOpacity.style.opacity = 1;
+      clearInterval(opacityTimer);
+    } else {
+      currOpacity += 0.1;
+      textOpacity.style.opacity = currOpacity;
+    }
+  }, 50);
+
+  currExpand = id;
+}
+function panelEqualize(id){
+  let currOpen = document.getElementById(currExpand);
+  document.querySelector("#" + currExpand + " h3").style.opacity = 0;
+  // document.querySelector('#'+id+" h3").style.opacity=1;
+  let textOpacity = document.querySelector("#" + id + " h3");
+  textOpacity.style.opacity = 1;
+  var minus = 6;
+
+  let flexTimer = setInterval(function () {
+    if (minus <= 1) {
+      currOpen.style.flex = 1;
+      clearInterval(flexTimer);
+    } else {
+      minus -= 0.05;
+      currOpen.style.flex = minus;
+    }
+  }, 1);
+
+  let currOpacity = 1;
+  let opacityTimer = setInterval(function () {
+    if (currOpacity <= 0) {
+      textOpacity.style.opacity = 0;
+      clearInterval(opacityTimer);
+    } else {
+      currOpacity -= 0.1;
+      textOpacity.style.opacity = currOpacity;
+    }
+  }, 40);
+
+  currExpand = 'p';
 }
