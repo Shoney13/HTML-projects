@@ -4,5 +4,4 @@ function buttonClicked(digitOperator) {
     currDisplay += String(digitOperator);
     document.getElementById("display").innerText = currDisplay;
   }
-
 }

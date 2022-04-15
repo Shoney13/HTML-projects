@@ -10,7 +10,7 @@ body {
   height: 100%;
   flex-direction: column;
 }
-.bulbImg{
+.bulbImg {
   width: 50%;
   height: 50%;
   border: double yellow;

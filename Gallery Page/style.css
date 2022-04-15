@@ -13,7 +13,7 @@ html {
   height: 100vh;
 }
 
-.header h1{
+.header h1 {
   text-align: center;
   font-size: xx-large;
 }
@@ -38,14 +38,15 @@ html {
   position: relative;
 }
 
-.panel h3 ,h1{
+.panel h3,
+h1 {
   font-family: "Mogra", cursive;
   font-size: x-large;
   color: gold;
   text-shadow: 0 0 3px black;
 }
 
-.panel:hover{
+.panel:hover {
   box-shadow: 0 0 0 2px white;
 }
 
@@ -92,7 +93,6 @@ footer {
   /* transform: translateX(-50%); */
 }
 
-
 .fa-linkedin,
 .fa-github {
   font-size: xx-large;
@@ -103,10 +103,10 @@ footer {
 .fa-github:hover {
   transform: scale(1.1);
 }
-.fa-github{
+.fa-github {
   color: white;
 }
 
-.fa-linkedin{
-  color: #0077B5;
+.fa-linkedin {
+  color: #0077b5;
 }

@@ -42,7 +42,7 @@ function panelSwitch(id) {
   let opacityTimer = setInterval(function () {
     if (currOpacity >= 1) {
       textOpacity.style.opacity = 1;
-      takeInput=true;
+      takeInput = true;
       clearInterval(opacityTimer);
     } else {
       currOpacity += 0.1;
@@ -77,7 +77,7 @@ function panelExpand(id) {
   let opacityTimer = setInterval(function () {
     if (currOpacity >= 1) {
       textOpacity.style.opacity = 1;
-      takeInput=true;
+      takeInput = true;
       clearInterval(opacityTimer);
     } else {
       currOpacity += 0.1;
@@ -112,7 +112,7 @@ function panelEqualize(id) {
   let opacityTimer = setInterval(function () {
     if (currOpacity <= 0) {
       textOpacity.style.opacity = 0;
-      takeInput=true;
+      takeInput = true;
       clearInterval(opacityTimer);
     } else {
       currOpacity -= 0.1;

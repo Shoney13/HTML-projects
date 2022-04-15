@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <script src="calculator.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div id="display">
-
+      <div id="display"></div>
+      <div class="buttons">
+        <div class="btn" onclick="buttonClicked('CLR')">CLR</div>
+        <div class="btn" onclick="buttonClicked('DEL')">
+          <i class="fa-solid fa-delete-left"></i>
         </div>
-        <div class="buttons">
-            <div class="btn" onclick="buttonClicked('CLR')">CLR</div>
-            <div class="btn" onclick="buttonClicked('DEL')"><i class="fa-solid fa-delete-left"></i></div>
-            <div class="btn" onclick="buttonClicked('%')"><i class="fa-solid fa-percent"></i></div>
-            <div class="btn" onclick="buttonClicked('/')"><i class="fa-solid fa-divide"></i></i></div>
-            <div class="btn" onclick="buttonClicked(7)">7</div>
-            <div class="btn" onclick="buttonClicked(8)">8</div>
-            <div class="btn" onclick="buttonClicked(9)">9</div>
-            <div class="btn" onclick="buttonClicked('*')"><i class="fa-solid fa-xmark"></i></div>
-            <div class="btn" onclick="buttonClicked(4)">4</div>
-            <div class="btn" onclick="buttonClicked(5)">5</div>
-            <div class="btn" onclick="buttonClicked(6)">6</div>
-            <div class="btn" onclick="buttonClicked('-')"><i class="fa-solid fa-minus"></i></div>
-            <div class="btn" onclick="buttonClicked(1)">1</div>
-            <div class="btn" onclick="buttonClicked(2)">2</div>
-            <div class="btn" onclick="buttonClicked(3)">3</div>
-            <div class="btn" onclick="buttonClicked('+')"><i class="fa-solid fa-plus"></i></div>
-            <div class="btn" onclick="buttonClicked(0)">0</div>
-            <div class="btn" onclick="buttonClicked('00')">00</div>
-            <div class="btn" onclick="buttonClicked('.')">.</div>
-            <div class="btn" onclick="buttonClicked('=')"><i class="fa-solid fa-equals"></i></div>
-            
+        <div class="btn" onclick="buttonClicked('%')">
+          <i class="fa-solid fa-percent"></i>
         </div>
+        <div class="btn" onclick="buttonClicked('/')">
+          <i class="fa-solid fa-divide"></i>
+        </div>
+        <div class="btn" onclick="buttonClicked(7)">7</div>
+        <div class="btn" onclick="buttonClicked(8)">8</div>
+        <div class="btn" onclick="buttonClicked(9)">9</div>
+        <div class="btn" onclick="buttonClicked('*')">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="btn" onclick="buttonClicked(4)">4</div>
+        <div class="btn" onclick="buttonClicked(5)">5</div>
+        <div class="btn" onclick="buttonClicked(6)">6</div>
+        <div class="btn" onclick="buttonClicked('-')">
+          <i class="fa-solid fa-minus"></i>
+        </div>
+        <div class="btn" onclick="buttonClicked(1)">1</div>
+        <div class="btn" onclick="buttonClicked(2)">2</div>
+        <div class="btn" onclick="buttonClicked(3)">3</div>
+        <div class="btn" onclick="buttonClicked('+')">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="btn" onclick="buttonClicked(0)">0</div>
+        <div class="btn" onclick="buttonClicked('00')">00</div>
+        <div class="btn" onclick="buttonClicked('.')">.</div>
+        <div class="btn" onclick="buttonClicked('=')">
+          <i class="fa-solid fa-equals"></i>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
