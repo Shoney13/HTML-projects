@@ -13,7 +13,6 @@ body {
 .bulbImg {
   width: 50%;
   height: 50%;
-  border: double yellow;
   display: flex;
   align-items: center;
   justify-content: center;
