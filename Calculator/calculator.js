@@ -15,12 +15,13 @@ function isOperator(operator) {
 
 function calculateDisplay(operator) {
   if (operator == "%") displayArea.innerText += "/100";
+  console.log(eval(currDisplay));
   currDisplay = parse(displayArea.innerText);
   displayArea.innerText = currDisplay;
 }
 
 function parse(str) {
-  return Function(`'use strict'; return (${str})`)();
+  return Function(` return (${str})`)();
 }
 
 function isNumber(operator) {
@@ -29,7 +30,7 @@ function isNumber(operator) {
 
 function buttonClicked(operator) {
   if (operator == "=") {
-    calculateDisplay();
+    calculateDisplay(operator);
     return;
   }
 
@@ -58,6 +59,8 @@ function buttonClicked(operator) {
     return;
   }
   if (lastValue == "." && (isOperator(operator) || operator == ".")) return;
+
+  if(isOperator(lastValue)&&(operator=='.'||operator=='00')) return;
   lastValue = operator;
 
   if (currDisplay == "0" && (operator == "00" || isOperator(operator))) return;
