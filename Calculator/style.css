@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap');
 .container {
   max-width: 400px;
   margin: 10vh auto 0 auto;
   box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+  z-index: 1;
 }
 
 #display {
@@ -9,7 +11,8 @@
   height: 70px;
   line-height: 70px;
   padding: 16px 8px;
-  font-size: 25px;
+  font-size: 35px;
+  font-family: 'Syncopate', sans-serif;
 }
 
 .buttons {
@@ -33,6 +36,39 @@
 .btn:hover {
   background-color: #323330;
   color: white;
+  box-shadow: 0 0 0 1px blue;
   transition: 0.1s ease-in-out;
-  cursor: url();
+}
+
+/* The Footer */
+footer {
+  /* position: absolute; */
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: black;
+  /* padding-bottom: 5%; */
+  /* float: bottom; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+}
+
+.fa-linkedin,
+.fa-github {
+  font-size: xx-large;
+  margin: 1%;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover {
+  transform: scale(1.1);
+}
+.fa-github {
+  color: black;
+}
+
+.fa-linkedin {
+  color: #0077b5;
 }
