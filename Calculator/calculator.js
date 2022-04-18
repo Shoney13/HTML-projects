@@ -14,10 +14,9 @@ function isOperator(operator) {
 }
 
 function calculateDisplay(operator) {
-  if(operator=='%')
-    displayArea.innerText+='/100';
-  currDisplay=parse(displayArea.innerText);
-  displayArea.innerText=currDisplay;
+  if (operator == "%") displayArea.innerText += "/100";
+  currDisplay = parse(displayArea.innerText);
+  displayArea.innerText = currDisplay;
 }
 
 function parse(str) {
@@ -29,15 +28,14 @@ function isNumber(operator) {
 }
 
 function buttonClicked(operator) {
-
-  if(operator=='='){
+  if (operator == "=") {
     calculateDisplay();
     return;
   }
 
-  if(operator=='%'){
+  if (operator == "%") {
     calculateDisplay(operator);
-    return
+    return;
   }
 
   if (operator == "CLR") {
@@ -46,10 +44,10 @@ function buttonClicked(operator) {
     return;
   }
 
-  if(operator=='DEL'){
-    if(currDisplay=='0') return;
+  if (operator == "DEL") {
+    if (currDisplay == "0") return;
     currDisplay = currDisplay.slice(0, currDisplay.length - 1);
-    if(currDisplay=='') currDisplay='0';
+    if (currDisplay == "") currDisplay = "0";
     displayArea.innerText = currDisplay;
     return;
   }
