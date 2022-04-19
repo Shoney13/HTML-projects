@@ -10,12 +10,12 @@ table {
 
 body {
 	background: url(https://cdn.hipwallpaper.com/i/20/62/ZbBgvl.jpg);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.takeInput{
-    font-size: large;
-    color: white;
+.takeInput {
+	font-size: large;
+	color: white;
 }
 
 tbody:first-child {
@@ -31,11 +31,11 @@ tbody:nth-child(odd) {
 
 h1 {
 	text-align: center;
-  font-family: "Bungee", cursive;
-  /* background: linear-gradient(60deg, #e21143, #ffb03a); */
-  /* color: lightblue; */
-  color: aliceblue;
-  text-shadow: 1px 1px black;
+	font-family: "Bungee", cursive;
+	/* background: linear-gradient(60deg, #e21143, #ffb03a); */
+	/* color: lightblue; */
+	color: aliceblue;
+	text-shadow: 1px 1px black;
 }
 .balanceSheet {
 	display: flex;
@@ -46,7 +46,7 @@ h1 {
 .btn-del {
 	height: 20px;
 	border: solid;
-    font-size: large;
+	font-size: large;
 	text-align: center;
 }
 
@@ -64,10 +64,47 @@ h1 {
 	background-color: #f44336;
 }
 
-.info{
-    margin: 10px auto 10px auto;
-    padding: 10px;
-    width: 100%;
+.info {
+	margin: 10px auto 10px auto;
+	padding: 10px;
+	width: 100%;
 	max-width: 550px;
-    background-color:white;
+	background-color: white;
+}
+
+/* Footer Icons */
+
+footer {
+	/* position: absolute; */
+	box-sizing: border-box;
+	display: block;
+	width: 250px;
+	background-color: rgba(255, 255, 255, 0.763);
+	text-align: center;
+	margin: 10px auto 10px auto;
+	padding: 10px;
+	color: black;
+	/* padding-bottom: 5%; */
+	/* float: bottom; */
+	/* left: 50%; */
+	/* transform: translateX(-50%); */
+}
+
+.fa-linkedin,
+.fa-github {
+	font-size: xx-large;
+	margin: 1%;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover {
+	transform: scale(1.1);
+}
+.fa-github {
+	color: black;
+}
+
+.fa-linkedin {
+	color: #0077b5;
+	box-sizing: border-box;
 }
