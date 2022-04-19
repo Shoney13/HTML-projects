@@ -41,6 +41,8 @@ function buttonClicked(operator) {
 
   if (operator == "CLR") {
     currDisplay = "0";
+    lastValue = "0";
+    decimalUsed = false;
     displayArea.innerText = currDisplay;
     return;
   }
@@ -60,7 +62,7 @@ function buttonClicked(operator) {
   }
   if (lastValue == "." && (isOperator(operator) || operator == ".")) return;
 
-  if(isOperator(lastValue)&&(operator=='.'||operator=='00')) return;
+  if (isOperator(lastValue) && (operator == "." || operator == "00")) return;
   lastValue = operator;
 
   if (currDisplay == "0" && (operator == "00" || isOperator(operator))) return;
