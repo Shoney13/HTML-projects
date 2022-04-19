@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+table {
+	width: 100%;
+	max-width: 600px;
+	text-align: center;
+	border: solid;
+	border-collapse: collapse;
+}
+
+body {
+	background: url(https://cdn.hipwallpaper.com/i/20/62/ZbBgvl.jpg);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.takeInput{
+    font-size: large;
+    color: white;
+}
+
+tbody:first-child {
+	background-color: white !important;
+}
+
+tbody:nth-child(even) {
+	background-color: lightgreen;
+}
+tbody:nth-child(odd) {
+	background-color: lightblue;
+}
+
+h1 {
+	text-align: center;
+  font-family: "Bungee", cursive;
+  /* background: linear-gradient(60deg, #e21143, #ffb03a); */
+  /* color: lightblue; */
+  color: aliceblue;
+  text-shadow: 1px 1px black;
+}
+.balanceSheet {
+	display: flex;
+	justify-content: center;
+}
+
+.btn-add,
+.btn-del {
+	height: 20px;
+	border: solid;
+    font-size: large;
+	text-align: center;
+}
+
+.btn-add {
+	width: 50px;
+	background-color: greenyellow;
+}
+
+.btn-add:hover,
+.btn-del:hover {
+	border: solid blue;
+}
+
+.btn-del {
+	background-color: #f44336;
+}
+
+.info{
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    width: 100%;
+	max-width: 550px;
+    background-color:white;
+}

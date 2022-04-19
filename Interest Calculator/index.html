@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Bank Interest Calculator</h1>
+      </header>
+      <div class="takeInput">
+        <label for="fullName">Name: </label>
+        <input type="text" name="fullName" id="fullName" placeholder="Jotaro" /><br />
+        <label for="bankBalance">Balance: </label>
+        <input type="number" name="bankBalance" id="bankBalance" placeholder="1000000" /><br />
+      </div>
+      <div class="btn-add" onclick="addToTable()">Add</div>
+      <div class="balanceSheet">
+        <table>
+        <tr>
+          <th>Name</th>
+          <th>Current Balance</th>
+          <th>Interest</th>
+          <th>Updated Balance</th>
+          <th></th>
+        </tr>
+        </table>
+      </div>
+      <div class="info">
+        Updated balance is calculated on the basis of following rules: <br>
+        If current balance is greater than or equal to 200000 the interest rate would be 10% <br>
+        If current balance is greater than or equal to 100000 the interest rate would be 5% <br>
+        If current balance is less than 100000 the interest rate would be 3% <br>
+
+      </div>
+    </div>
+    <script src="interest calculator.js"></script>
+  </body>
+</html>
