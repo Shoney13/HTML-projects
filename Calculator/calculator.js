@@ -36,6 +36,7 @@ function buttonClicked(operator) {
 
   if (operator == "%") {
     calculateDisplay(operator);
+    lastValue=currDisplay.charAt(currDisplay.length-1);
     return;
   }
 
