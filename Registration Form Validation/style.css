@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: #f3f3f3;
+	font-size: 1.125rem;
+	font-weight: 400;
+	line-height: 1.4;
+	height: 100%;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background: #1b1b32;
+	background-image: linear-gradient(
+			90deg,
+			rgba(54, 187, 180, 0.815),
+			rgba(65, 65, 167, 0.7)
+		),
+		url(https://wallpaperaccess.com/full/2024228.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+form {
+	max-width: 500px;
+	height: 100%;
+	background-color: rgba(47, 30, 78, 0.8);
+	padding: 15px 10px;
+}
+
+@media (min-width: 500px) {
+	form {
+		margin: 5% auto;
+		margin-top: 2%;
+		border-radius: 10px;
+	}
+}
+h1 {
+	text-align: center;
+	margin: 15px;
+}
+
+@media (min-width: 576px) {
+	form {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	form {
+		max-width: 720px;
+	}
+}
+
+.validation-hidden {
+	display: none;
+}
+
+.validations {
+	font-size: 0.8rem;
+	text-align: right;
+}
+
+.validation-valid {
+	font-weight: bolder;
+	color: rgb(0, 255, 0);
+}
+
+.validation-invalid {
+	color: red;
+}
+
+.validation-invalid-border {
+	box-shadow: 0px 0px 0px 2px red;
+}
+
+/* Spinning animation for loading*/
+@keyframes spinning {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.spin {
+	animation-name: spinning;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	/* linear | ease | ease-in | ease-out | ease-in-out */
+	animation-timing-function: linear;
+}
+
+/* Footer Icons */
+
+footer {
+	/* position: absolute; */
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	text-align: center;
+	/* margin: 10px; */
+	/* padding-bottom: 5%; */
+	/* float: bottom; */
+	/* left: 50%; */
+	/* transform: translateX(-50%); */
+}
+
+.fa-linkedin,
+.fa-github {
+	font-size: xx-large;
+	margin: 1%;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover {
+	transform: scale(1.1);
+}
+.fa-github {
+	color: #171515;
+}
+
+.fa-linkedin {
+	color: #0077b5;
+}
