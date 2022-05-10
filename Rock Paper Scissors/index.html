@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissors</title>
+		<!-- Local CSS -->
+		<link rel="stylesheet" href="style.css" />
+		<!-- Local JS -->
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="choice-container">
+			<div id="computer-container" class="row computer-choice">
+				<h2>Computer</h2>
+				<div id="computer-choice"></div>
+			</div>
+			<div id="user-container" class="row user-choice">
+				<h2>You</h2>
+				<div id="user-choice"></div>
+			</div>
+		</div>
+		<h2><span id="result"></span></h2>
+
+		<div class="button-column">
+			<div class="button">
+				<i id="rock" class="icon fa-solid fa-hand-back-fist"></i>
+			</div>
+			<div class="button">
+				<i id="paper" class="icon fa-solid fa-hand"></i>
+			</div>
+			<div class="button">
+				<i id="scissors" class="icon fa-solid fa-hand-scissors"></i>
+			</div>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"
+		></script>
+		<script src="script.js"></script>
+	</body>
+</html>
