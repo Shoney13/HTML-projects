@@ -7,6 +7,7 @@ document.querySelectorAll(".button").forEach((element) => {
 	possibleChoices.push(element.innerHTML);
 });
 
+// jQuery Listener for Click events
 $(".button").click(function (e) {
 	e.preventDefault();
 	userChoice.innerHTML = e.target.parentNode.innerHTML;
@@ -26,16 +27,19 @@ $(".button").click(function (e) {
 	}
 });
 
+// Adds Winner and Loser Classes
 function addWinnerLoser(winner, loser) {
 	$(winner).removeClass("winner loser draw").addClass("winner");
 	$(loser).removeClass("winner loser draw").addClass("loser");
 }
 
+// Adds Draw Class
 function addDraw() {
 	$("#computer-container").removeClass("winner loser").addClass("draw");
 	$("#user-container").removeClass("winner loser").addClass("draw");
 }
 
+// Ge the Winner and Loser
 function getWinner(computerChose, userChose) {
 	console.log("computerChoice", computerChose);
 	console.log("userChose", userChose);
@@ -49,6 +53,7 @@ function getWinner(computerChose, userChose) {
 	return "You";
 }
 
+// Geta a random Choice for game
 function getRandomChoice() {
 	return possibleChoices[getRandomInteger(0, 3)];
 }
