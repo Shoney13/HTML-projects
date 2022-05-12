@@ -1,0 +1,70 @@
+* {
+	text-align: center;
+}
+
+body{
+
+	margin: 0px;
+	padding: 0px;
+}
+
+.background {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.514)), url('./resources/background-2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+	background-size: cover;
+}
+.container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2rem;
+	background-color: rgba(240, 248, 255, 0.586);
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	
+}
+#registrationPassword,
+#loginPassword {
+	width: 15rem;
+	min-height: 1.3rem;
+	border-radius: 0.5rem;
+	border: 2px solid black;
+}
+
+#registrationPassword:focus,
+#loginPassword:focus {
+	outline-color: blue;
+}
+
+.submit-button {
+	box-shadow: none;
+	font-size: 1.3rem;
+	/* border: 1px solid black; */
+	margin: 1em auto;
+	max-width: 10rem;
+	border-radius: 0.5em;
+	background-color: rgb(255, 255, 255);
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.submit-button:hover {
+	background-color: lightgreen;
+	transform: scale(1.1);
+}
+
+.invalid {
+	color: red;
+}
+
+.valid {
+	color: rgb(0, 255, 0);
+}
+
+.valid-registration,
+.valid-login,
+.invalid-registration,
+.invalid-login {
+	display: none;
+}

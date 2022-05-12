@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Password Encryption</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="background"></div>
+		<div class="container">
+			<h1>Password Encryption</h1>
+			<div class="registration-container">
+				<h2>Register</h2>
+				<input
+					type="password"
+					name="registrationPassword"
+					placeholder="Enter your password"
+					id="registrationPassword"
+				/>
+				<div class="valid valid-registration">Looks Good!</div>
+				<div class="invalid invalid-registration">Password must be atleast 8 characters</div>
+				<div class="submit-button" id="registrationPasswordSubmit">Submit</div>
+			</div>
+			<div class="login-container">
+				<h2>Login</h2>
+				<input
+				type="password"
+				name="loginPassword"
+				placeholder="Enter your password"
+				id="loginPassword"
+				/>
+				<div class="valid valid-login">Access Granted!</div>
+				<div class="invalid invalid-login">Incorrect password</div>
+				<div class="submit-button" id="loginPasswordSubmit">Submit</div>
+			</div>
+		</div>
+	</body>
+</html>
