@@ -11,20 +11,22 @@
 	<body>
 		<div class="background"></div>
 		<div class="container">
+			<p id="switchRegisration" class="hidden switch-link">Switch to Registration</p>
+			<p id="switchLogin" class="hidden switch-link">Switch to Login</p>
 			<h1>Password Encryption</h1>
-			<div class="registration-container">
+			<div class="registration-container" id="registration-container">
 				<h2>Register</h2>
 				<input
 					type="password"
 					name="registrationPassword"
-					placeholder="Enter your password"
+					placeholder="Enter new password"
 					id="registrationPassword"
 				/>
 				<div class="valid valid-registration">Looks Good!</div>
 				<div class="invalid invalid-registration">Password must be atleast 8 characters</div>
 				<div class="submit-button" id="registrationPasswordSubmit">Submit</div>
 			</div>
-			<div class="login-container">
+			<div class="login-container hidden" id="login-container">
 				<h2>Login</h2>
 				<input
 				type="password"

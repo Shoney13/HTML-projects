@@ -74,7 +74,19 @@ const lookup = {
 };
 let currPassword = "";
 const submitButton = document.querySelectorAll(".submit-button");
-
+const switchLoginPage = document.querySelectorAll(".switch-link");
+const loginContainer = document.getElementById("login-container");
+const registrationContainer = document.getElementById("registration-container");
+const switchLogin = document.getElementById("switchLogin");
+const switchRegisration = document.getElementById("switchRegisration");
+const validRegistration =
+	document.getElementsByClassName("valid-registration")[0];
+const invalidRegistration = document.getElementsByClassName(
+	"invalid-registration"
+)[0];
+const validLogin = document.getElementsByClassName("valid-login")[0];
+const invalidLogin = document.getElementsByClassName("invalid-login")[0];
+// Submit Button Event Listner
 submitButton.forEach((button) => {
 	button.addEventListener("click", (e) => {
 		// Password from input
@@ -84,32 +96,57 @@ submitButton.forEach((button) => {
 		if (currId == "registrationPasswordSubmit") {
 			// If length of registration password is less than 8
 			if (passwordInput.length < 8) {
-				document.getElementsByClassName("valid-registration")[0].style.display =
-					"none";
-				document.getElementsByClassName("invalid-registration")[0].style.display =
-					"block";
+				validRegistration.style.display = "none";
+				invalidRegistration.style.display = "block";
 				return;
 			}
 			// if registration password is valid
-			document.getElementsByClassName("valid-registration")[0].style.display =
-				"block";
-			document.getElementsByClassName("invalid-registration")[0].style.display =
-				"none";
+			validRegistration.style.display = "block";
+			invalidRegistration.style.display = "none";
 			currPassword = encodePassword(passwordInput);
+			// Remove the hidden class from switch-links
+			switchLogin.classList.remove("hidden");
 		} else if (currId == "loginPasswordSubmit") {
 			// if login password is valid
 			if (validatePassword(passwordInput) && passwordInput.length >= 8) {
-				document.getElementsByClassName("valid-login")[0].style.display = "block";
-				document.getElementsByClassName("invalid-login")[0].style.display = "none";
+				validLogin.style.display = "block";
+				invalidLogin.style.display = "none";
 				return;
 			}
 			// if login password invalid
-			document.getElementsByClassName("valid-login")[0].style.display = "none";
-			document.getElementsByClassName("invalid-login")[0].style.display = "block";
+			validLogin.style.display = "none";
+			invalidLogin.style.display = "block";
 		}
 	});
 });
 
+// Login Switch Event Listner
+switchLoginPage.forEach((link) => {
+	link.addEventListener("click", (e) => {
+		let currId = e.target.id;
+		// if on Registration Page
+		if (currId == "switchLogin") {
+			// hidding registration container and Showing Login container
+			switchLogin.classList.add("hidden");
+			switchRegisration.classList.remove("hidden");
+			registrationContainer.classList.add("hidden");
+			loginContainer.classList.remove("hidden");
+			validRegistration.style.display = "none";
+			invalidRegistration.style.display = "none";
+			return;
+		}
+		// If on Login Page
+		// hidding Login container and Showing Registration container
+		switchLogin.classList.remove("hidden");
+		switchRegisration.classList.add("hidden");
+		registrationContainer.classList.remove("hidden");
+		loginContainer.classList.add("hidden");
+		validLogin.style.display = "none";
+		invalidLogin.style.display = "none";
+	});
+});
+
+// Encode and Decode the password
 function encodePassword(password) {
 	// string to array of characters
 	// map array to ROT13 using Lookup object
@@ -123,3 +160,4 @@ function encodePassword(password) {
 function validatePassword(password) {
 	return currPassword == encodePassword(password);
 }
+
