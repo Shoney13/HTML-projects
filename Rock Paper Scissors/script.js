@@ -2,6 +2,7 @@ const computerChoice = document.getElementById("computer-choice");
 const userChoice = document.getElementById("user-choice");
 const result = document.getElementById("result");
 const possibleChoices = [];
+let playerDisplayed = false;
 
 document.querySelectorAll(".button").forEach((element) => {
 	possibleChoices.push(element.innerHTML);
@@ -10,6 +11,12 @@ document.querySelectorAll(".button").forEach((element) => {
 // jQuery Listener for Click events
 $(".button").click(function (e) {
 	e.preventDefault();
+	// Displaye Players
+	if(!playerDisplayed){
+		$('.row h2')[0].style.display='block';
+		$('.row h2')[1].style.display='block';
+		playerDisplayed=true;
+	}
 	userChoice.innerHTML = e.target.parentNode.innerHTML;
 	computerChoice.innerHTML = getRandomChoice();
 
@@ -41,8 +48,6 @@ function addDraw() {
 
 // Ge the Winner and Loser
 function getWinner(computerChose, userChose) {
-	console.log("computerChoice", computerChose);
-	console.log("userChose", userChose);
 	if (
 		(computerChose == "rock" && userChose == "scissors") ||
 		(computerChose == "scissors" && userChose == "paper") ||
