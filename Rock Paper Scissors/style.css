@@ -44,6 +44,9 @@ h2 {
 	background-color: hsl(60, 96%, 64%);
 }
 
+.button .icon{
+	transition: transform 100ms ease;
+}
 .button .icon:hover {
 	transform: scale(1.1);
 }
