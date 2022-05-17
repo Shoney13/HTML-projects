@@ -12,10 +12,10 @@ document.querySelectorAll(".button").forEach((element) => {
 $(".button").click(function (e) {
 	e.preventDefault();
 	// Displaye Players
-	if(!playerDisplayed){
-		$('.row h2')[0].style.display='block';
-		$('.row h2')[1].style.display='block';
-		playerDisplayed=true;
+	if (!playerDisplayed) {
+		$(".row h2")[0].style.display = "block";
+		$(".row h2")[1].style.display = "block";
+		playerDisplayed = true;
 	}
 	userChoice.innerHTML = e.target.parentNode.innerHTML;
 	computerChoice.innerHTML = getRandomChoice();
