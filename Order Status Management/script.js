@@ -56,7 +56,7 @@ foodButton.forEach((button) => {
 });
 
 function placeOrder(orderName, id, foodSteps) {
-    // Adding new order div on click to the front
+	// Adding new order div on click to the front
 	document.getElementById("orders-container").innerHTML =
 		`<div class="order">
     <h2>${orderName}</h2>
@@ -64,13 +64,13 @@ function placeOrder(orderName, id, foodSteps) {
     <div class="status-container" id="${id}" >
     </div>
 </div>` + document.getElementById("orders-container").innerHTML;
-    // Promise function
+	// Promise function
 	let currOrder = (work, timeout) =>
 		new Promise((resolve) => {
 			work();
 			setTimeout(() => resolve(), timeout);
 		});
-        // calling promise function
+	// calling promise function
 	currOrder(currWork(id, foodSteps[0][1]), foodSteps[0][0])
 		.then(() => currOrder(currWork(id, foodSteps[1][1]), foodSteps[1][0]))
 		.then(() => currOrder(currWork(id, foodSteps[2][1]), foodSteps[2][0]))

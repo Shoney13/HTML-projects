@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
 :root,
 body {
 	font-size: 16px;
@@ -32,12 +34,14 @@ body {
 	left: 0px;
 	z-index: -1;
 }
+
 /* Main Container Header*/
 .container h1 {
 	text-align: center;
 	margin-top: 5rem;
 }
 
+/* Button Container */
 .food-button-container {
 	display: flex;
 	justify-content: space-evenly;
@@ -45,6 +49,7 @@ body {
 	flex-wrap: wrap;
 }
 
+/* Button */
 .food-button {
 	text-align: center;
 	position: relative;
@@ -76,12 +81,14 @@ body {
 	transition: transform 200ms ease-out;
 }
 
+/* Hover only on desktop */
 @media (hover) {
 	.food-button:hover::after {
 		transform: scale(1);
 	}
 }
 
+/* For Order Status */
 .orders-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -101,11 +108,13 @@ body {
 .completed-order {
 	background-color: green;
 }
+
 .status-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+
 .order-status {
 	border: 1px solid white;
 	width: 100%;
@@ -114,4 +123,36 @@ body {
 	padding: 0.3em;
 	border-radius: 0.7em;
 	transition: all 200ms ease-out;
+}
+
+/* Footer Icons */
+footer {
+	/* position: absolute; */
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	text-align: center;
+	/* padding-bottom: 5%; */
+	/* float: bottom; */
+	/* left: 50%; */
+	/* transform: translateX(-50%); */
+}
+
+.fa-linkedin,
+.fa-github {
+	font-size: xx-large;
+	margin: 1%;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover {
+	transform: scale(1.1);
+}
+
+.fa-github {
+	color: white;
+}
+
+.fa-linkedin {
+	color: #0077b5;
 }
