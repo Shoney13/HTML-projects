@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root,
+body {
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+	color: white;
+	scroll-behavior: smooth;
+}
+
+:root {
+	background-color: black;
+}
+
+/* Background Image */
+.container::before {
+	content: "";
+	background: url(./resources/background-1.jpg);
+	opacity: 0.2;
+	background-repeat: repeat;
+	background-position: center;
+	height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+}
+/* Main Container Header*/
+.container h1 {
+	text-align: center;
+	margin-top: 5rem;
+}
+
+.food-button-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.food-button {
+	text-align: center;
+	position: relative;
+	margin: 1rem;
+	border: 1px solid white;
+	border-radius: 1em;
+	font-size: 1.5rem;
+	flex: 1;
+	min-width: 5em;
+	max-width: 7em;
+	transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.food-button:hover {
+	background-color: white;
+	color: black;
+}
+
+.food-button::after {
+	content: attr(cooking-time);
+	transform: scale(1);
+	display: block;
+	position: absolute;
+	background-color: black;
+	border-radius: 3px;
+	color: white;
+
+	transform: scale(0);
+	transition: transform 200ms ease-out;
+}
+
+@media (hover) {
+	.food-button:hover::after {
+		transform: scale(1);
+	}
+}
+
+.orders-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	text-align: center;
+}
+
+.order {
+	flex: 1;
+	width: 25%;
+	min-width: 350px;
+	max-width: 450px;
+	padding: 1rem;
+	/* min-height: 450px; */
+}
+
+.completed-order {
+	background-color: green;
+}
+.status-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.order-status {
+	border: 1px solid white;
+	width: 100%;
+	font-size: 1.2rem;
+	margin: 0.3em;
+	padding: 0.3em;
+	border-radius: 0.7em;
+	transition: all 200ms ease-out;
+}
