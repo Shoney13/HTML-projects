@@ -1,140 +1,140 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 html {
-  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+	background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .project {
-    width: 90%;
-  }
+	.project {
+		width: 90%;
+	}
 }
 /* Large devices (laptops/desktops, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .project {
-    width: 30%;
-    min-width: 350px;
-  }
+	.project {
+		width: 30%;
+		min-width: 350px;
+	}
 }
 
 h1 {
-  text-align: center;
-  font-family: "Bungee", cursive;
-  /* background: linear-gradient(60deg, #e21143, #ffb03a); */
-  /* color: lightblue; */
-  color: aliceblue;
-  text-shadow: 1px 1px black;
+	text-align: center;
+	font-family: "Bungee", cursive;
+	/* background: linear-gradient(60deg, #e21143, #ffb03a); */
+	/* color: lightblue; */
+	color: aliceblue;
+	text-shadow: 1px 1px black;
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 .project {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  border-radius: 15px;
-  justify-content: center;
-  text-align: center;
-  margin: 1%;
-  transition: transform 200ms ease;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	border-radius: 15px;
+	justify-content: center;
+	text-align: center;
+	margin: 1%;
+	transition: transform 200ms ease;
 }
 
 .project:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transform: scale(1.1);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .projectpic {
-  display: flex;
-  width: 100%;
-  height: auto;
-  justify-content: center;
-  margin: 0%;
-  margin-bottom: 1%;
-  padding: 0%;
-  border-radius: 15px;
+	display: flex;
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	margin: 0%;
+	margin-bottom: 1%;
+	padding: 0%;
+	border-radius: 15px;
 }
 
 img {
-  max-width: 99%;
-  object-fit: contain;
-  border-radius: 15px;
+	max-width: 99%;
+	object-fit: contain;
+	border-radius: 15px;
 }
 
 .projectname {
-  font-size: larger;
-  font-family: "Bungee", cursive;
-  color: rgb(49, 138, 197);
-  text-shadow: 1px 2px white;
+	font-size: larger;
+	font-family: "Bungee", cursive;
+	color: rgb(49, 138, 197);
+	text-shadow: 1px 2px white;
 }
 
 a:link,
 a:visited,
 a:hover,
 a:active {
-  text-decoration: none;
+	text-decoration: none;
 }
 /* Footer Icons */
 
 footer {
-  /* position: absolute; */
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  text-align: center;
-  /* padding-bottom: 5%; */
-  /* float: bottom; */
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
+	/* position: absolute; */
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	text-align: center;
+	/* padding-bottom: 5%; */
+	/* float: bottom; */
+	/* left: 50%; */
+	/* transform: translateX(-50%); */
 }
-
 
 .fa-linkedin,
 .fa-github {
-  font-size: xx-large;
-  margin: 1%;
+	font-size: xx-large;
+	margin: 1%;
+	transition: transform 200ms ease-in-out;
 }
 
 .fa-linkedin:hover,
 .fa-github:hover {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
-.fa-github{
-  color: #171515;
+.fa-github {
+	color: #171515;
 }
 
-.fa-linkedin{
-  color: #0077B5;
+.fa-linkedin {
+	color: #0077b5;
 }
 
 /* use WIP with Project class and wip with span */
 .WIP {
-  position: relative;
+	position: relative;
 }
 .wip {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  font-size: larger;
-  font-family: "Bungee", cursive;
-  font-weight: bold;
-  display: none;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	font-size: larger;
+	font-family: "Bungee", cursive;
+	font-weight: bold;
+	display: none;
 }
 .WIP:hover .wip {
-  display: block;
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px black;
-  background-color: rgba(0, 0, 0, 0.479);
-  width: 100%;
+	display: block;
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px black;
+	background-color: rgba(0, 0, 0, 0.479);
+	width: 100%;
 }

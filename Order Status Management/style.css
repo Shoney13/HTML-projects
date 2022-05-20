@@ -142,8 +142,8 @@ footer {
 .fa-github {
 	font-size: xx-large;
 	margin: 1%;
+	transition: transform 200ms ease-in-out;
 }
-
 .fa-linkedin:hover,
 .fa-github:hover {
 	transform: scale(1.1);
