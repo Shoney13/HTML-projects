@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="style.css" />
 		<!-- Local JS -->
 		<script src="script.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<!-- Font awesome Pro-->
 		<link
 			rel="stylesheet"
@@ -19,6 +20,7 @@
 			rel="icon"
 			href="resources/icons8-manager-100.png"
 		/>
+
 	</head>
 	<body>
 		<nav id="navbar">
@@ -135,20 +137,20 @@
 						</div>
 					</div>
 					<div class="contact-form">
-						<form action="">
+						<form id='contact' method="post" action="https://script.google.com/macros/s/AKfycbzqxLcrfyLErBcVhIWmYXQVfeLWU7qdVrqiPKd9F5xa1EyLLvpW-S5mYSHgF84acpMh/exec">
 							<span class="contact-form-title"> Get in touch </span>
-							<input type="text" name="" id="name" placeholder="Name" required />
-							<input type="email" name="" id="email" placeholder="Email" required />
-							<input type="text" name="" id="subject" placeholder="Subject" required />
+							<input type="text" name="name" id="name" placeholder="Name" required />
+							<input type="email" name="email" id="email" placeholder="Email" required />
+							<input type="text" name="subject" id="subject" placeholder="Subject" required />
 							<textarea
-								name=""
+								name="message"
 								id="message"
 								placeholder="Message"
 								height="300px"
 								required
 							></textarea>
 							<button type="submit">
-								Send Email <i class="fa-solid fa-arrow-right-long"></i>
+								Send <i class="fa-solid fa-arrow-right-long"></i>
 							</button>
 						</form>
 					</div>
