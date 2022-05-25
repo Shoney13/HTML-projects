@@ -144,12 +144,13 @@ body {
 /* Projects Container */
 .projects-container {
 	color: white;
-	min-height: 95vh;
+	min-height: 100vh;
 	height: 100%;
 	text-shadow: 1px 1px black;
 	background-color: #726cf8;
 	background-image: linear-gradient(315deg, #726cf8 0%, #e975a8 74%);
 	padding-bottom: 1rem;
+	padding-top: 1rem;
 }
 
 @media screen and (max-width: 617px) {
