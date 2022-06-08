@@ -47,7 +47,7 @@ h1 {
 	justify-content: center;
 	text-align: center;
 	margin: 1%;
-	transition: transform 200ms ease;
+	transition: all 200ms ease;
 }
 
 .project:hover {
