@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TODO</title>
+		<!-- Local Stylesheet -->
+		<link rel="stylesheet" href="style.css" />
+		<!-- Local JS -->
+		<script src="script.js" defer></script>
+		<!-- Title icon -->
+		<link type="image/png" sizes="96x96" rel="icon" href="./resources/icons8-todo-list-100.png">
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<!-- BootStrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+			integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+			integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
+	<body>
+		<h1>Todo List</h1>
+		<!-- Modal -->
+		<div
+		class="modal fade"
+		id="task-input"
+		tabindex="-1"
+		aria-labelledby="exampleModalLabel"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+					<button
+						type="button"
+						class="btn-close"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					></button>
+				</div>
+				<div class="modal-body">
+					<form class="row g-3">
+						<div class="mb-3">
+							<label for="new-task-name" class="col-form-label">Task:</label>
+							<input type="text" class="form-control" id="new-task-name" required/>
+						</div>
+						<div class="mb-3">
+							<label for="new-task-priority" class="col-form-label">Priority:</label>
+							<select id="new-task-priority" class="form-select" aria-label="Default select example">
+								<option disabled>Select Priority</option>
+								<option selected value="1">High</option>
+								<option value="2">Medium</option>
+								<option value="3">Low</option>
+							  </select>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+						Cancel
+					</button>
+					<button id="add-task-button" type="submit" class="btn btn-primary" data-bs-dismiss="modal" >Add Task</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="container">
+			<div class="status">
+				<h1>Pending</h1>
+				<button
+					type="button"
+					class="add-todo"
+					data-bs-toggle="modal"
+					data-bs-target="#task-input"
+					data-bs-whatever="@mdo"
+				>
+					<i class="fa-solid fa-plus"></i> Add Todo
+				</button>
+				<div class="status-tasks status-pending">
+					<div class="todo-item" draggable="true">
+						<div class="task-info">
+							<span class="todo-task">Study</span><br />
+							<span data-priority="3" class="task-priority">Priority: low</span>
+						</div>
+						<span class="close-todo" onclick="closeTodo(this)"><i class="fa-solid fa-2xl fa-xmark"></i></span>
+					</div>
+					<div class="todo-item" draggable="true">
+						<div class="task-info">
+							<span class="todo-task">Buy a Pizza</span><br />
+							<span data-priority="2" class="task-priority">Priority: medium</span>
+						</div>
+						<span class="close-todo" onclick="closeTodo(this)"><i class="fa-solid fa-2xl fa-xmark"></i></span>
+					</div>
+				</div>
+			</div>
+			<div class="status">
+				<h1>In Progress</h1>
+				<div class="status-tasks status-in-progress">
+					<div class="todo-item" draggable="true">
+						<div class="task-info">
+							<span class="todo-task">Bring grocery</span><br />
+							<span data-priority="2" class="task-priority">Priority: medium</span>
+						</div>
+						<span class="close-todo" onclick="closeTodo(this)"><i class="fa-solid fa-2xl fa-xmark"></i></span>
+					</div>
+				</div>
+			</div>
+			<div class="status">
+				<h1>Completed</h1>
+				<div class="status-tasks status-completed"></div>
+			</div>
+		</div>
+		<footer>
+			<div>
+				<i class="fa-regular fa-copyright">Shone Jogi</i>
+			</div>
+			<div>
+				<a href="https://www.linkedin.com/in/shone-jogi-80526a1b5/" target="_blank"
+					><i class="fa-brands fa-linkedin"></i
+				></a>
+				<a href="https://github.com/Shoney13/HTML-projects" target="_blank"
+					><i class="fa-brands fa-github"></i
+				></a>
+			</div>
+		</footer>
+	</body>
+</html>
+<!-- 
+		/\_____/\
+	   /  o   o  \
+	  ( ==  ^  == )
+	   )         (
+	  (           )
+	 ( (  )   (  ) )
+	(__(__)___(__)__)
+		 -->
